@@ -205,12 +205,12 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>Hi there! I’m glad that you open up the web, here are some more details about my project.<br>There’s really not much space to tell through the poster, so I’ll try to explain my work to my best effort here.<br>Also, there is a simplified Chinese version, welcome to check on that: <a target="_blank" rel="noopener" href="https://kiyas24.github.io/2022/06/07/ESG-chinese-ver/">中文版點這裡</a></p>
-<p>There are some guidence QA:</p>
+      		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Hi! I’m glad that you open up the web, here are some more details about my project.<br>There’s really not much space to tell through the poster, so I’ll try to explain my work to my best effort here.<br>Also, there is a simplified Chinese version, welcome to check on that: <a target="_blank" rel="noopener" href="https://kiyas24.github.io/2022/06/07/ESG-chinese-ver/">中文版點這裡</a></p>
+<p>Here are some guidence QA:</p>
 <ol>
 <li>What is ESG?</li>
 <li>What happened to the U.S. stock market during early pandemic?</li>
-<li>Why COVID-19?</li>
+<li>Why Covid-19 market crashes are suitable for analyzing stock price resilience?</li>
 <li>Are there related work?</li>
 <li>About the ESG data</li>
 <li>About the methodology</li>
@@ -219,7 +219,7 @@
 </ol>
 <hr>
 <h2 id="What-is-ESG"><a href="#What-is-ESG" class="headerlink" title="What is ESG ?"></a>What is ESG ?</h2><p><img src="/img/ESG/whatIsESG.png" alt="WhatisESG"></p>
-<p><strong>Environmental, Social and Governance (ESG) criteria</strong> are a set of standards designed to evaluate how socially conscious are the companies in the three areas. It has rooted in “Corporate social responsibility” (CSR), which originally, was a form of business self-regulation that companies contribute to societal goals voluntarily, and turned into a more sophisticated business model that companies leverage as a strategy. </p>
+<p><strong>Environmental, Social and Governance (ESG) criteria</strong> are a set of standards designed to evaluate how socially conscious are the companies in the three areas. It has rooted in “Corporate social responsibility” (CSR), which originally, was a form of business self-regulation that companies contribute to societal goals voluntarily, and turned into a more sophisticated business model that companies leverage as a strategy. At present, the international maintream practice of CSR focuses on the three dimensions of ESG.</p>
 <p>In 2005, the idea to integrate ESG issues into investment analysis was first introduced at the Who Cares Wins conference. Such analysis has drawn much attention due to its potential profitability and the underlying civic responsibility, and since then many organizations have developed criteria for ESG factors, known as ESG ratings.</p>
 <hr>
 <h2 id="What-happened-to-the-U-S-stock-market-during-early-pandemic"><a href="#What-happened-to-the-U-S-stock-market-during-early-pandemic" class="headerlink" title="What happened to the U.S. stock market during early pandemic?"></a>What happened to the U.S. stock market during early pandemic?</h2><p>Under globalization and urban sprawl, the contagious disease outbreaks on a global scope have forced humans to establish new boundaries and draw safe distances from one another to contain the spreading. The required isolation on the individual level soon brought about drastic changes in a connected world. The sudden halt of work, the crashing of medical system and more, these factors coupled and interacted, jointly amplifying the impacts on the economy.</p>
@@ -227,7 +227,7 @@
 <p><img src="/img/ESG/crash.png" alt="Crash"></p>
 <p>Consequently, there is growing attention on the search for low-risk and high-performance investments. Among the strategies, the trends of environmental, social and governance (ESG) stocks’ integration in investors’ portfolio choice decisions have been rising remarkably (Rubbaniy et al., 2021). However, existing literatures present mixed evidence regarding the association between ESG, risk and performance.</p>
 <hr>
-<h2 id="Why-Covid-19"><a href="#Why-Covid-19" class="headerlink" title="Why Covid-19?"></a>Why Covid-19?</h2><p>Unlike other financial crises, COVID-19 is a pandemic-induced market crash that originated from global health concerns. The unexpected and exogenous nature of the shock suggests that firms had very limited ability and time to respond (Albuquerque et al., 2020). Therefore, we argue that the COVID-19 market crash revealed the natural endurance of the firms, which allows us to investigate whether ESG activities can build up resiliency for firms.</p>
+<h2 id="Why-Covid-19-market-crashes-are-suitable-for-analyzing-stock-price-resilience"><a href="#Why-Covid-19-market-crashes-are-suitable-for-analyzing-stock-price-resilience" class="headerlink" title="Why Covid-19 market crashes are suitable for analyzing stock price resilience?"></a>Why Covid-19 market crashes are suitable for analyzing stock price resilience?</h2><p>Unlike other financial crises, COVID-19 is a pandemic-induced market crash that originated from global health concerns. The unexpected and exogenous nature of the shock suggests that firms had very limited ability and time to respond (Albuquerque et al., 2020). Therefore, we argue that the COVID-19 market crash revealed the natural endurance of the firms, which allows us to investigate whether ESG activities can build up resiliency for firms.</p>
 <hr>
 <h2 id="Are-there-related-work"><a href="#Are-there-related-work" class="headerlink" title="Are there related work?"></a>Are there related work?</h2><p>Yes, Of course.</p>
 <h4 id="CSR-and-firm’s-performance"><a href="#CSR-and-firm’s-performance" class="headerlink" title="CSR and firm’s performance:"></a>CSR and firm’s performance:</h4><p><img src="/img/ESG/literature.png" alt="literature"></p>
@@ -244,6 +244,7 @@
 <hr>
 <h2 id="About-the-ESG-data"><a href="#About-the-ESG-data" class="headerlink" title="About the ESG data"></a>About the ESG data</h2><p>Our main data source for ESG performance is Thomson Reuters’ MarketPsych Refinitiv ESG database. It measures the ESG score through real-time global news and social media through NLP engine. MarketPsych Refinitiv ESG database covers the following areas for each pillar:</p>
 <p><img src="/img/ESG/ESG_Refinitiv.png" alt="ESG_Refinitiv"></p>
+<p>Each pillar score ranges from 0-100.</p>
 <hr>
 <h2 id="About-the-methodology"><a href="#About-the-methodology" class="headerlink" title="About the methodology"></a>About the methodology</h2><h4 id="Event-Study"><a href="#Event-Study" class="headerlink" title="Event Study"></a>Event Study</h4><p>In the field of finance, an event study is an empirical analysis that employs statistical methods to examine the behavior of firms’ stock prices around corporate events. The event should be unexpected to the capital market to better reflect its impact. We picked 4 event days across the pandemic:</p>
 <ol>
@@ -293,7 +294,7 @@
 <p><img src="/img/ESG/finding3.png" alt="finding3"></p>
 <p><img src="/img/ESG/finding4.png" alt="finding4"></p>
 <hr>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>This study examines the stock price resilience of 3,101 US listed ESG stocks through event study. We believe the promotion of ESG in the past few years have caused a growing acknowledgement of sustainability, and how it can further bring positive impact on environment and the firms’ operation. Although investment on ESG can be a burden and cost to companies, it may gain recognition over the capital markets that creates a premium for them. Our evidences show that when faced with COVID-19 market crashes, companies with better financial characteristics, such as good profitability or big market value, have higher chances of forming a premium. The influences are also sectoral dependent, which is in line with the idea that ESG factors are context-specific. Finally, we also show that there is a difference in the resilience of how firm reacted to early COVID-19 propagation period and the latter virus variants market crashes.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>This study examines the stock price resilience of 3,101 US listed ESG stocks through event study. We believe the promotion of ESG in the past few years have caused a growing acknowledgement of sustainability, and how it can further bring positive impact on environment and the firms’ operation. Although investment on ESG can be a burden and cost to companies, it may gain recognition over the capital markets that creates a premium for them. Our evidences show that when faced with COVID-19 market crashes, companies with better financial characteristics, such as good profitability or big market value, have higher chances of forming a premium. The influences are also sectoral dependent, which is in line with the idea that ESG factors are context-specific. Finally, we also show that there is a difference in the resilience of how firm reacted to early COVID-19 propagation period and the latter virus variants market crashes. </p>
 <hr>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
 <li>Albuquerque, R., Koskinen, Y., Yang, S., &amp; Zhang, C. (2020). Resiliency of environmental and social stocks: An analysis of the exogenous covid-19 market crash. The Review of Corporate Finance Studies, 9 (3), 593–621.</li>
