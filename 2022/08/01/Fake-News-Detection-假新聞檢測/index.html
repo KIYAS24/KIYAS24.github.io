@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2022 | TzuJo&#39;s Project</title>
+  <title>Fake News Detection 假新聞檢測 | TzuJo&#39;s Project</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -148,23 +148,25 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
+      
 
-<section id="Archivehero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/Archive.png) no-repeat center center fixed;">
+<!-- ============================ Hero Image =========================== -->
+
+<section id="hero" class="scrollme">
+    <div class="container-fluid element-img" style="background: url(/img/FND/cover.png) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
                     <div>
                         
-                        <h2></h2>
-                        <p></p>
+                        <h1 style="color:white;"></h2>
+                        <h2 style="color:white;"></p>
                         
-                        <h2></h2>
-                        <p></p>
+                        <h1 style="color:white;"></h2>
+                        <h2 style="color:white;"></p>
                         
-                        <h2>ARCHIVE</h2>
-                        <p></p>
+                        <h1 style="color:white;"></h2>
+                        <h2 style="color:white;"></p>
                         
 
                     </div>
@@ -180,58 +182,141 @@
 <div class="heightblock"></div>
 <!-- // End height spacing helper -->
 
-<!-- ============================ END Hero Image =========================== -->
 
-
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2022/08/01/Fake-News-Detection-假新聞檢測/">Fake News Detection 假新聞檢測</a></h4>
-                            
-                            <p><time datetime="2022-07-31T16:06:38.000Z"><a href="/2022/08/01/Fake-News-Detection-假新聞檢測/">2022-08-01</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2022/06/07/ESG-chinese-ver/">On the Resilience of US ESG Stocks： Evidences from the COVID-19 Market Crashes 專題探索（四）-中文版</a></h4>
-                            
-                            <p><time datetime="2022-06-07T13:30:36.000Z"><a href="/2022/06/07/ESG-chinese-ver/">2022-06-07</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2022/06/07/Topic-Research-IV-ESG/">On the Resilience of US ESG Stocks： Evidences from the COVID-19 Market Crashes</a></h4>
-                            
-                            <p><time datetime="2022-06-07T07:58:25.000Z"><a href="/2022/06/07/Topic-Research-IV-ESG/">2022-06-07</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2022-07-31T16:06:38.000Z" itemprop="datePublished">
+          2022-08-01
+      </time>
+    
+</span>
+                <h1>Fake News Detection 假新聞檢測</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="About-this-Project-關於這個項目："><a href="#About-this-Project-關於這個項目：" class="headerlink" title="About this Project 關於這個項目："></a>About this Project 關於這個項目：</h2><p>這是 2022 Spring 所修陽明交大資工系所開設【人工智慧概論】的學期專案。開放自由擇題的前提下，我們組（四人）選擇嘗試 NLP 主題的假新聞檢測，採用<strong>機器學習</strong>與<strong>深度學習</strong>等不同方法做比對和檢驗。很榮幸該項目獲得這個課程的榮譽獎項- Best Honorable Mention Award.</p>
+<p>This is the final project of (2022 Spring) Introduction of Artificial Intelligence. Our group has selected a NLP related topic - Fake News Detection, as our direction. We have utilized several Machine Learning and Deep Learning methods to evaluate the performance. And delightedly this project has won the Best Honorable Mention Award of this course.</p>
+<hr>
+<h2 id="Motivation-and-Goal"><a href="#Motivation-and-Goal" class="headerlink" title="Motivation and Goal"></a>Motivation and Goal</h2><p>Motivation: Information spread on the media has proved to be swift and immediate, while its impacts are far-reaching. Thus, fake news can be damaging as we see in elections, Covid-19 and more.</p>
+<p>Goal: Build a system that detects fake news through ML&#x2F;DL techniques. It’s textual-based (given news headlines and content) and supervised-learning.</p>
+<hr>
+<h2 id="Methodology-overview"><a href="#Methodology-overview" class="headerlink" title="Methodology overview"></a>Methodology overview</h2><p><img src="/img/FND/method.png" alt="Method"></p>
+<h3 id="Dataset-Selection-Welfake"><a href="#Dataset-Selection-Welfake" class="headerlink" title="Dataset Selection: Welfake"></a>Dataset Selection: Welfake</h3><p>There are all kinds of public fake news dataset, yet the qualities are diversed. We carefully chose a dataset that originated from Welfake. This dataset is a mixture of multiple open datasets, which is large enough in size after combination and have a balanced distribution.</p>
+<h3 id="Data-Preprocessing"><a href="#Data-Preprocessing" class="headerlink" title="Data Preprocessing"></a>Data Preprocessing</h3><p>Just to name a few that are specific to this task:</p>
+<ul>
+<li>if one of (title, content) is missing, we copy that one to the other.</li>
+<li>we have used APIs to detect the languages, and make sure only English ones are left.</li>
+<li>we took away html noises, such as &lt; br &gt; and &lt; p &gt; etc.</li>
+</ul>
+<h3 id="Feature-Engineering"><a href="#Feature-Engineering" class="headerlink" title="Feature Engineering"></a>Feature Engineering</h3><p>We constructed two types of feature, which are present as follows:<br><img src="/img/FND/feature.png" alt="feature"></p>
+<h3 id="Main-Approach"><a href="#Main-Approach" class="headerlink" title="Main Approach"></a>Main Approach</h3><p><img src="/img/FND/approach.png" alt="approach"></p>
+<p>Baseline:</p>
+<ul>
+<li>skip-gram + news title&#x2F;content + Naive Bayes for ML </li>
+<li>bi-gram + news title&#x2F;content + LSTM for DL</li>
+</ul>
+<hr>
+<h2 id="Experiment-Results"><a href="#Experiment-Results" class="headerlink" title="Experiment Results:"></a>Experiment Results:</h2><p>Input Configuration:</p>
+<ul>
+<li>News: news title and content</li>
+<li>WP: writting patterns features</li>
+<li>GR: Grammar related features</li>
+</ul>
+<p><img src="/img/FND/ML_method.png" alt="ML_result"><br><img src="/img/FND/DL_method.png" alt="DL_result"><br><img src="/img/FND/ensemble.png" alt="ensemble_result"></p>
+<hr>
+<h2 id="Simple-Analysis-and-Evaluation"><a href="#Simple-Analysis-and-Evaluation" class="headerlink" title="Simple Analysis and Evaluation:"></a>Simple Analysis and Evaluation:</h2><ul>
+<li>在所有Classifer中，以 News + WP + GR 為輸入，並用skip-gram進行word embedding的LSTM取得最好的ACC(96.8%)</li>
+<li>BERT 僅用前處理完的新聞input(新聞標題和內文)，也能取得很好的ACC (93.4%)</li>
+<li>Decision Tree + Naive Bayes + Voting 的組合並沒有達到更好performance的預期，我們認為若如果有更多classifiers和更多權重的嘗試，效果可能會更好</li>
+<li>由於資料集兩類的資料數量相當，在accuracy和F1-score之間的差異不大。</li>
+</ul>
+<p><img src="/img/FND/models.png" alt="models"></p>
+<ul>
+<li><p>Naive Bayes 假設各種features之間的機率互相獨立，在現實中往往是不成立的，因此在feature之間相關性較大的情況下分類效果較差。由於上述提到的問題，可以看到naive bayes本身並不是一個效果很好的模型，因此使用此方法的voting效果也沒有達到很好。</p>
+</li>
+<li><p>模型的穩健度不夠，我們沒有對data做擾動或其它增加noise的方式，可能會輕易受到adversarial attack的影響從而影響模型的判斷結果。（我們有嘗試過其它dataset沒有經過前處理的原始資料，模型的performance都沒有很好）</p>
+</li>
+<li><p>Word embedding的差異</p>
+<ul>
+<li>在DL model上，skip-gram的效果相較bi-gram有顯著的提升</li>
+<li>在ML model上，bi-gram的效果普遍比skip-gram要好</li>
+</ul>
+</li>
+<li><p>在判斷假新聞的過程中，可以看到分類器對於writing pattern作為判斷依據，比以grammer pattern為判斷依據，可以達到更佳的效果，我想可能是因為假新聞大部分都有某些操作的痕跡，所以我們從writing判斷會比較reliable</p>
+</li>
+<li><p>可能的理由：在LSTM的模型架構上，直接將詞向量矩陣加載到Embedding層中，但在classifier的地方，則需要將每個sentence中的詞向量（取500個，不足補0）取平均，得到sentence vector，因此效果不甚理想。</p>
+</li>
+</ul>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>哈咯你好嗎！</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2022/06/07/ESG-chinese-ver/">
+        On the Resilience of US ESG Stocks： Evidences from the COVID-19 Market Crashes 專題探索（四）-中文版 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
