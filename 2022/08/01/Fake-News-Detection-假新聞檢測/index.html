@@ -152,35 +152,36 @@
 
 <!-- ============================ Hero Image =========================== -->
 
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/FND/cover.png) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h1 style="color:white;"></h2>
-                        <h2 style="color:white;"></p>
-                        
-                        <h1 style="color:white;"></h2>
-                        <h2 style="color:white;"></p>
-                        
-                        <h1 style="color:white;"></h2>
-                        <h2 style="color:white;"></p>
-                        
 
+    <section id="hero" class="scrollme">
+        <div class="container-fluid element-img" style="background: url(/img/FND/cover.png) no-repeat center center fixed;background-size: cover">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                    <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                        <div>
+                            
+                            <h1 style="color:white;"></h2>
+                            <h2 style="color:white;"></p>
+                            
+                            <h1 style="color:white;"></h2>
+                            <h2 style="color:white;"></p>
+                            
+                            <h1 style="color:white;"></h2>
+                            <h2 style="color:white;"></p>
+                            
+
+                        </div>
                     </div>
                 </div>
+                <!-- // .col-md-12 -->
             </div>
-            <!-- // .col-md-12 -->
+            <div class="herofade beige-dk"></div>
         </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
+    </section>
 
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
+    <!-- Height spacing helper -->
+    <div class="heightblock"></div>
+    <!-- // End height spacing helper -->
 
 
 <section id="intro">
@@ -228,26 +229,24 @@
 <p><img src="/img/FND/ML_method.png" alt="ML_result"><br><img src="/img/FND/DL_method.png" alt="DL_result"><br><img src="/img/FND/ensemble.png" alt="ensemble_result"></p>
 <hr>
 <h2 id="Simple-Analysis-and-Evaluation"><a href="#Simple-Analysis-and-Evaluation" class="headerlink" title="Simple Analysis and Evaluation:"></a>Simple Analysis and Evaluation:</h2><ul>
-<li>在所有Classifer中，以 News + WP + GR 為輸入，並用skip-gram進行word embedding的LSTM取得最好的ACC(96.8%)</li>
-<li>BERT 僅用前處理完的新聞input(新聞標題和內文)，也能取得很好的ACC (93.4%)</li>
-<li>Decision Tree + Naive Bayes + Voting 的組合並沒有達到更好performance的預期，我們認為若如果有更多classifiers和更多權重的嘗試，效果可能會更好</li>
-<li>由於資料集兩類的資料數量相當，在accuracy和F1-score之間的差異不大。</li>
+<li>In all classifiers, using News + WP + GR as input (which means the input includes the preprocessed news title&#x2F;content, writting patterns related features and Grammar patterns related features) and using skip-gram for word embedding, LSTM got the best accuracy(96.8%). 在所有Classifer中，以 News + WP + GR 為輸入，並用skip-gram進行word embedding的LSTM取得最好的ACC(96.8%)</li>
+<li>Having preprocessed news content&#x2F;title as input only, BERT also scored well, with an accuracy of 93.4%; BERT 僅用前處理完的新聞input(新聞標題和內文)，也能取得很好的ACC (93.4%)</li>
+<li>Decision Tree + Naive Bayes + Voting did not outperform other models, we thought that if we add more models and try more voting weights, will generate a better result. Decision Tree + Naive Bayes + Voting 的組合並沒有達到更好performance的預期，我們認為若如果有更多classifiers和更多權重的嘗試，效果可能會更好</li>
+<li>Since we balanced the dataset in advance in terms of true and fake news, the accuracy and f1-score did not have a big gap as expected. 由於資料集兩類的資料數量相當，在accuracy和F1-score之間的差異不大。</li>
 </ul>
 <p><img src="/img/FND/models.png" alt="models"></p>
 <ul>
-<li><p>Naive Bayes 假設各種features之間的機率互相獨立，在現實中往往是不成立的，因此在feature之間相關性較大的情況下分類效果較差。由於上述提到的問題，可以看到naive bayes本身並不是一個效果很好的模型，因此使用此方法的voting效果也沒有達到很好。</p>
+<li><p>Naive Bayes assumes that the probabilities are independent of each features, which does not hold often in reality, so the classification is less effective in cases where the correlation between features is large. Thus, we can see that naive bayes itself is not a very effective model under our setting, so the voting based upon using this method is not very good either. Naive Bayes 假設各種features之間的機率互相獨立，在現實中往往是不成立的，因此在feature之間相關性較大的情況下分類效果較差。由於上述提到的問題，可以看到naive bayes本身並不是一個效果很好的模型，因此使用此方法的voting效果也沒有達到很好。</p>
 </li>
-<li><p>模型的穩健度不夠，我們沒有對data做擾動或其它增加noise的方式，可能會輕易受到adversarial attack的影響從而影響模型的判斷結果。（我們有嘗試過其它dataset沒有經過前處理的原始資料，模型的performance都沒有很好）</p>
+<li><p>There is room to improve the robustness of our model. Perturbation or noises of any kind is not made to the data, which may be easily affected by the adversarial attack and thus affect the judgment of the model. (We have tried other datasets without pre-processed&#x2F;raw data, the performance was slumped. But since this is not the focus of this project, we leave it for future discovery)模型的穩健度不夠，我們沒有對data做擾動或其它增加noise的方式，可能會輕易受到adversarial attack的影響從而影響模型的判斷結果。（我們有嘗試過其它dataset沒有經過前處理的原始資料，模型的performance都沒有很好。但這並不是這個項目的重點，因此我們暫時對這部分的處理）</p>
 </li>
-<li><p>Word embedding的差異</p>
+<li><p>Differences on Word embedding: on LSTM, we load the word embedding matrices directly to the embedding layer; however, on other classifers, we need to take average out the word vectors to get a sentence vector (in order to represent each sentence, where we take 500 vectors of each, and pad 0 if missing).在LSTM的模型架構上，直接將詞向量矩陣加載到Embedding層中，但在classifier的地方，則需要將每個sentence中的詞向量（取500個，不足補0）取平均，得到sentence vector，因此效果不甚理想。</p>
 <ul>
-<li>在DL model上，skip-gram的效果相較bi-gram有顯著的提升</li>
-<li>在ML model上，bi-gram的效果普遍比skip-gram要好</li>
+<li>on DL models，skip-gram is better in general</li>
+<li>on ML models，bi-gram is better in general</li>
 </ul>
 </li>
-<li><p>在判斷假新聞的過程中，可以看到分類器對於writing pattern作為判斷依據，比以grammer pattern為判斷依據，可以達到更佳的效果，我想可能是因為假新聞大部分都有某些操作的痕跡，所以我們從writing判斷會比較reliable</p>
-</li>
-<li><p>可能的理由：在LSTM的模型架構上，直接將詞向量矩陣加載到Embedding層中，但在classifier的地方，則需要將每個sentence中的詞向量（取500個，不足補0）取平均，得到sentence vector，因此效果不甚理想。</p>
+<li><p>在判斷假新聞的過程中，可以看到分類器對於writing pattern作為判斷依據，比以grammer pattern為判斷依據，可以達到更佳的效果，我想可能是因為假新聞大部分都有某些操作的痕跡，所以我們從writing patterns判斷會比較可靠。</p>
 </li>
 </ul>
 
@@ -255,6 +254,10 @@
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2022/08/07/CV-object-detection/" style="float: left;">
+        ← CV-object detection
+    </a>
     
     
     <a class="pull-right" href="/2022/06/07/ESG-chinese-ver/">
