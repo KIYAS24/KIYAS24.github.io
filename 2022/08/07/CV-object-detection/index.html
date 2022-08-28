@@ -169,19 +169,29 @@
         </div>
         <div class="col-md-8 col-md-offset-2">
       		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="About-this-Project-關於這個項目："><a href="#About-this-Project-關於這個項目：" class="headerlink" title="About this Project 關於這個項目："></a>About this Project 關於這個項目：</h2><p>這是 2022 Spring 所修陽明交大資工系所開設【人工智慧概論】的作業。實作Adaboost演算法（Viola-Jones object detection）並對比YoloV5，對校園的停車位做物體檢測，對畫面中的停車格檢測是否為空。</p>
-<p>This is one of the homeworks of (2022 Spring) Introduction of Artificial Intelligence. We implement Viola-Jones object detection algorithm via Adaboost to detect whether the parking lots are empty. The results are compared with YoloV5.</p>
+<p>This is one of the homework of (2022 Spring) Introduction of Artificial Intelligence. We implement Viola-Jones object detection algorithm via Adaboost to detect whether the parking lots are empty. The results are compared with YoloV5.</p>
 <hr>
+<h4 id="Prepare-the-dataset"><a href="#Prepare-the-dataset" class="headerlink" title="Prepare the dataset"></a>Prepare the dataset</h4><p>Including (1) load the data (2) convert into grey scale and (3) resize the images into (36, 16) as required via the package “Pillow”.</p>
+<h4 id="Implement-AdaBoost-Algorithm"><a href="#Implement-AdaBoost-Algorithm" class="headerlink" title="Implement AdaBoost Algorithm"></a>Implement AdaBoost Algorithm</h4><p>Since the specific features can appear at different positions and scales, we utilize tricks from Viola Jones algorithm by first calculating integral images (a summed-area table) to build Harr like features more efficiently. After obtaining the features, we add the features to our training data, which are in the form of integral images. </p>
+<p>To decide which features can be part of the final classifier, here comes the core of AdaBoost algorithm. <strong>AdaBoost stands for adaptive boosting, it iteratively selects an ensemble of component (weak) classifiers.</strong> These weak classifiers only need to split training examples for at least 50% accuracy, but eventually a sequence of weak classifiers is combined into a strong one. During the training, we reweight the misclassified examples iteratively, and that gives an intuition to “adaptive”.</p>
+<hr>
+<h4 id="Comparison-between-Adaboost-and-Yolov5-Part-4"><a href="#Comparison-between-Adaboost-and-Yolov5-Part-4" class="headerlink" title="Comparison between Adaboost and Yolov5 (Part 4)"></a>Comparison between Adaboost and Yolov5 (Part 4)</h4><p><img src="/img/AI_intro/compare1.png" alt="result1"><br><img src="/img/AI_intro/compare2.png" alt="result2"></p>
+<hr>
+<p>For more information:</p>
 <p><object data= "/img/AI_intro/CV.pdf" 
                 width="800" 
                 height="500"><br></object></p>
 <hr>
-<h4 id="the-samples-of-car-and-non-car-each-from-training-dataset"><a href="#the-samples-of-car-and-non-car-each-from-training-dataset" class="headerlink" title="the samples of car and non-car each from training dataset"></a>the samples of car and non-car each from training dataset</h4><p><img src="/img/AI_intro/sample.png" alt="sample"></p>
-<p><video src="img/AI_intro/video_test.mov" ></video></p>
+<h4 id="the-samples-of-car-and-non-car-parking-space-each-from-training-dataset"><a href="#the-samples-of-car-and-non-car-parking-space-each-from-training-dataset" class="headerlink" title="the samples of car and non-car (parking space) each from training dataset"></a>the samples of car and non-car (parking space) each from training dataset</h4><p><img src="/img/AI_intro/sample.png" alt="sample"></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2022/08/28/Log-period-power-laws-for-bubble-modeling/" style="float: left;">
+        ← Log-period power laws for bubble modeling
+    </a>
     
     
     <a class="pull-right" href="/2022/08/01/Fake-News-Detection-%E5%81%87%E6%96%B0%E8%81%9E%E6%AA%A2%E6%B8%AC/">
